@@ -1,0 +1,59 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+BOT_NAME	../steam/settings.py	/^BOT_NAME = 'steam'$/;"	kind:variable	line:12
+C5GameSpider	../steam/spiders/SteamSpider.py	/^class C5GameSpider(scrapy.Spider):$/;"	kind:class	line:15
+DOWNLOADER_MIDDLEWARES	../steam/settings.py	/^DOWNLOADER_MIDDLEWARES = {$/;"	kind:variable	line:28
+DOWNLOAD_DELAY	../steam/settings.py	/^DOWNLOAD_DELAY = 2$/;"	kind:variable	line:33
+ITEM_PIPELINES	../steam/settings.py	/^ITEM_PIPELINES = {$/;"	kind:variable	line:24
+NEWSPIDER_MODULE	../steam/settings.py	/^NEWSPIDER_MODULE = 'steam.spiders'$/;"	kind:variable	line:15
+RANDOMIZE_DOWNLOAD_DELAY	../steam/settings.py	/^RANDOMIZE_DOWNLOAD_DELAY = True$/;"	kind:variable	line:34
+ROBOTSTXT_OBEY	../steam/settings.py	/^ROBOTSTXT_OBEY = True$/;"	kind:variable	line:22
+Request	../steam/spiders/SteamSpider.py	/^from scrapy.http import Request$/;"	kind:namespace	line:5
+SPIDER_MODULES	../steam/settings.py	/^SPIDER_MODULES = ['steam.spiders']$/;"	kind:variable	line:14
+Selector	../steam/spiders/SteamSpider.py	/^from scrapy.selector import Selector$/;"	kind:namespace	line:8
+SteamItem	../steam/items.py	/^class SteamItem(scrapy.Item):$/;"	kind:class	line:11
+SteamItem	../steam/spiders/SteamSpider.py	/^from steam.items import SteamItem$/;"	kind:namespace	line:4
+SteamPipeline	../steam/pipelines.py	/^class SteamPipeline(object):$/;"	kind:class	line:13
+SteamSpider.py	../steam/spiders/SteamSpider.py	1;"	kind:file	line:1
+SteamSpiderMiddleware	../steam/middlewares.py	/^class SteamSpiderMiddleware(object):$/;"	kind:class	line:12
+TextResponse	../steam/spiders/SteamSpider.py	/^from scrapy.http import TextResponse$/;"	kind:namespace	line:7
+UserAgentMiddleware	../steam/middlewares.py	/^from scrapy.downloadermiddlewares.useragent import UserAgentMiddleware$/;"	kind:namespace	line:9
+__init__	../steam/middlewares.py	/^    def __init__(self, user_agent=''):$/;"	kind:member	line:17
+__init__	../steam/pipelines.py	/^    def __init__(self):$/;"	kind:member	line:14
+__init__.py	../steam/__init__.py	1;"	kind:file	line:1
+__init__.py	../steam/spiders/__init__.py	1;"	kind:file	line:1
+allowed_domains	../steam/spiders/SteamSpider.py	/^    allowed_domains = ["steamcommunity.com"]$/;"	kind:variable	line:17
+codecs	../steam/pipelines.py	/^import codecs$/;"	kind:namespace	line:10
+from_crawler	../steam/middlewares.py	/^    def from_crawler(cls, crawler):$/;"	kind:member	line:48
+item_link	../steam/items.py	/^    item_link = scrapy.Field()$/;"	kind:variable	line:15
+item_name	../steam/items.py	/^    item_name = scrapy.Field()$/;"	kind:variable	line:14
+item_price	../steam/items.py	/^    item_price = scrapy.Field()$/;"	kind:variable	line:16
+items.py	../steam/items.py	1;"	kind:file	line:1
+json	../steam/pipelines.py	/^import json$/;"	kind:namespace	line:9
+json	../steam/spiders/SteamSpider.py	/^import json$/;"	kind:namespace	line:6
+middlewares.py	../steam/middlewares.py	1;"	kind:file	line:1
+name	../steam/spiders/SteamSpider.py	/^    name = "steam"$/;"	kind:variable	line:16
+os	../steam/pipelines.py	/^import os$/;"	kind:namespace	line:8
+page_list	../steam/spiders/SteamSpider.py	/^page_list = range(1, 20)$/;"	kind:variable	line:13
+parse	../steam/spiders/SteamSpider.py	/^    def parse(self, response):$/;"	kind:member	line:25
+pipelines.py	../steam/pipelines.py	1;"	kind:file	line:1
+process_item	../steam/pipelines.py	/^    def process_item(self, item, spider):$/;"	kind:member	line:18
+process_request	../steam/middlewares.py	/^    def process_request(self, request, spider):$/;"	kind:member	line:20
+process_spider_exception	../steam/middlewares.py	/^    def process_spider_exception(self, response, exception, spider):$/;"	kind:member	line:69
+process_spider_input	../steam/middlewares.py	/^    def process_spider_input(self, response, spider):$/;"	kind:member	line:54
+process_spider_output	../steam/middlewares.py	/^    def process_spider_output(self, response, result, spider):$/;"	kind:member	line:61
+process_start_requests	../steam/middlewares.py	/^    def process_start_requests(self, start_requests, spider):$/;"	kind:member	line:77
+random	../steam/middlewares.py	/^import random$/;"	kind:namespace	line:10
+scrapy	../steam/items.py	/^import scrapy$/;"	kind:namespace	line:8
+scrapy	../steam/spiders/SteamSpider.py	/^import scrapy$/;"	kind:namespace	line:3
+settings.py	../steam/settings.py	1;"	kind:file	line:1
+signals	../steam/middlewares.py	/^from scrapy import signals$/;"	kind:namespace	line:8
+spider_closed	../steam/pipelines.py	/^    def spider_closed(self, spider):$/;"	kind:member	line:24
+spider_opened	../steam/middlewares.py	/^    def spider_opened(self, spider):$/;"	kind:member	line:86
+start_requests	../steam/spiders/SteamSpider.py	/^    def start_requests(self):$/;"	kind:member	line:22
+start_urls	../steam/spiders/SteamSpider.py	/^    start_urls = [$/;"	kind:variable	line:18
+user_agent_list	../steam/middlewares.py	/^    user_agent_list = [$/;"	kind:variable	line:26
