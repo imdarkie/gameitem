@@ -19,18 +19,23 @@ NEWSPIDER_MODULE = 'steam.spiders'
 #USER_AGENT = 'steam (+http://www.yourdomain.com)'
 
 # Obey robots.txt rules
-ROBOTSTXT_OBEY = True
+ROBOTSTXT_OBEY = False
+COOKIES_ENABLED = False
+# COOKIES_DEBUG = True
 
 ITEM_PIPELINES = {
     'steam.pipelines.SteamPipeline': 200
 }
 
 DOWNLOADER_MIDDLEWARES = {
+    # 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware': 400,
     'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware': None,
+    # 'scrapy.contrib.downloadermiddleware.cookies.CookiesMiddleware': 700,
+    # 'steam.middlewares.SteamSpiderMiddleware': 500
     'steam.middlewares.SteamSpiderMiddleware': 300
 }
 
-DOWNLOAD_DELAY = 2
+DOWNLOAD_DELAY = 3
 RANDOMIZE_DOWNLOAD_DELAY = True
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)

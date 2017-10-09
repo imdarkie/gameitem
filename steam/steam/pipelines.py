@@ -12,6 +12,7 @@ import codecs
 
 class SteamPipeline(object):
     def __init__(self):
+        os.chdir('..')
         file_name = os.getcwd() + '/steam_items.json'
         self.file = codecs.open(file_name, mode='wb', encoding='utf-8')
 
