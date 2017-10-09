@@ -9,6 +9,7 @@ from scrapy import signals
 from scrapy.downloadermiddlewares.useragent import UserAgentMiddleware
 import random
 
+
 class SteamSpiderMiddleware(object):
     # Not all methods need to be defined. If a method is not defined,
     # scrapy acts as if the spider middleware does not modify the

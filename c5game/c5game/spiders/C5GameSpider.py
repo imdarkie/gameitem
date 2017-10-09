@@ -5,8 +5,8 @@ from c5game.items import C5GameItem
 from scrapy.http import Request
 import re
 
-
 base_url = 'https://www.c5game.com'
+
 
 class C5GameSpider(scrapy.Spider):
     pattern = re.compile(r'^\d+\.\d+$')
@@ -32,18 +32,23 @@ class C5GameSpider(scrapy.Spider):
 
     def parse(self, response):
         info_grp = response.xpath('//ul[contains(@class, "list-item4")]/li')
-        next_url_suffix = response.xpath('//ul[contains(@class, "pagination")]/li[contains(@class, "next")]/a/@href').extract()[0]
+        next_url_suffix = response.xpath(
+            '//ul[contains(@class, "pagination")]/li[contains(@class, "next")]/a/@href'
+        ).extract()[0]
 
         for info in info_grp:
             item = C5GameItem()
-            item['item_name'] = info.xpath('p[@class="name"]/a/span/text()').extract()[0].strip()
-            item['item_link'] = base_url + info.xpath('a/@href').extract()[0].strip()
+            item['item_name'] = info.xpath(
+                'p[@class="name"]/a/span/text()').extract()[0].strip()
+            item['item_link'] = base_url + info.xpath(
+                'a/@href').extract()[0].strip()
             # item_price_str = info.xpath('p[@class="info"]/span[@class="pull-left"]/span/text()').extract()[0].decode('unicode_escape').encode('ascii','ignore')
-            item_price_str = info.xpath('p[@class="info"]/span[@class="pull-left"]/span/text()').extract()[0]
+            item_price_str = info.xpath(
+                'p[@class="info"]/span[@class="pull-left"]/span/text()'
+            ).extract()[0]
             item_price_str = item_price_str.strip().replace(',', '')
             item['item_price'] = item_price_str
             yield item
 
         next_url = base_url + next_url_suffix
         yield Request(next_url, callback=self.parse)
-

@@ -14,7 +14,6 @@ BOT_NAME = 'c5game'
 SPIDER_MODULES = ['c5game.spiders']
 NEWSPIDER_MODULE = 'c5game.spiders'
 
-
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'c5game (+http://www.yourdomain.com)'
 
@@ -23,9 +22,7 @@ ROBOTSTXT_OBEY = True
 
 ROBOTSTXT_OBEY = True
 
-ITEM_PIPELINES = {
-    'c5game.pipelines.C5GamePipeline': 200
-}
+ITEM_PIPELINES = {'c5game.pipelines.C5GamePipeline': 200}
 
 DOWNLOADER_MIDDLEWARES = {
     'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware': None,

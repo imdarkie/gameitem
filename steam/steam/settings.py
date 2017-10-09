@@ -14,7 +14,6 @@ BOT_NAME = 'steam'
 SPIDER_MODULES = ['steam.spiders']
 NEWSPIDER_MODULE = 'steam.spiders'
 
-
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'steam (+http://www.yourdomain.com)'
 
@@ -23,9 +22,7 @@ ROBOTSTXT_OBEY = False
 COOKIES_ENABLED = False
 # COOKIES_DEBUG = True
 
-ITEM_PIPELINES = {
-    'steam.pipelines.SteamPipeline': 200
-}
+ITEM_PIPELINES = {'steam.pipelines.SteamPipeline': 200}
 
 DOWNLOADER_MIDDLEWARES = {
     # 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware': 400,

@@ -18,7 +18,8 @@ class C5GamePipeline(object):
 
     def process_item(self, item, spider):
         line = json.dumps(dict(item)) + '\n'
-        self.file.write(line.decode('unicode_escape').encode('ascii', 'ignore'))
+        self.file.write(
+            line.decode('unicode_escape').encode('ascii', 'ignore'))
         return item
 
     def spider_closed(self, spider):
