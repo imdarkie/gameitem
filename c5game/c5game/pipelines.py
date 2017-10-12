@@ -12,7 +12,8 @@ import codecs
 
 class C5GamePipeline(object):
     def __init__(self):
-        os.chdir('..')
+        os.chdir(os.path.dirname(os.path.realpath(__file__)))
+        os.chdir('..' + os.path.sep + '..')  
         file_name = os.getcwd() + '/c5game_items.json'
         self.file = codecs.open(file_name, mode='wb', encoding='utf-8')
 

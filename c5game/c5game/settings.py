@@ -20,8 +20,6 @@ NEWSPIDER_MODULE = 'c5game.spiders'
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
 
-ROBOTSTXT_OBEY = True
-
 ITEM_PIPELINES = {'c5game.pipelines.C5GamePipeline': 200}
 
 DOWNLOADER_MIDDLEWARES = {

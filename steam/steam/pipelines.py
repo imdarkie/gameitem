@@ -12,13 +12,14 @@ import codecs
 
 class SteamPipeline(object):
     def __init__(self):
-        os.chdir('..')
+        os.chdir(os.path.dirname(os.path.realpath(__file__)))
+        os.chdir('..' + os.path.sep + '..')
         file_name = os.getcwd() + '/steam_items.json'
         self.file = codecs.open(file_name, mode='wb', encoding='utf-8')
 
     def process_item(self, item, spider):
         line = json.dumps(dict(item)) + '\n'
-        self.file.write(line.decode('unicode_escape'))
+        self.file.write(line.decode('unicode_escape').encode('ascii', 'ignore'))
         return item
 
     def spider_closed(self, spider):
